@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .wrap{
+      width: 80%;
+      margin: 0 auto;
+      background-color: #ccc;
+    }
+    .img-wrap{
+      /*테스트너비지정*/
+      width: 50%;
+      min-width: 200px;
+      max-width: 600px;
+      /*테스트 쟝소 width min max*/
+      /*border: 1px solid #000;
+      background-color: #f00;
+      margin: 50px;*/
+    }
+    /*.img-wrap 후손 img 태그*/  
+    .img-wrap img{
+      display: block; /*img 인라인테그로 그냥두면 공백 텍스트로 인식 블럭레벨 수준으로 변경 디스플레이테그*/
+
+      /*100% 사용 가능한 부모의 영역*/
+      /*width 지정하지 않고 
+      max-width: 100% 원래 이미지 크기 이상 되지 않음*/
+
+      width: 100%;
+      max-width: 100%;
+      /*height 초기값은 auto*/  
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="img-wrap ex1"><img src="assets/css/images/화면 캡처 2022-09-21 132351.jpg" alt="이미지연습1">
+    </div>
+
+  </div>
+    <div class="img-wrap ex2"><img src="assets/css/images/화면 캡처 2022-09-21 132351.jpg" alt="이미지연습2">
+    </div>
+
+  </div>
+    <div class="img-wrap ex3"><img src="assets/css/images/화면 캡처 2022-09-21 132351.jpg" alt="이미지연습3">
+      
+    </div>
+
+  
+
+
+
+  </div>
+
+</body>
+</html>
