@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>border
+
+  </title>
+</head>
+<body>
+  <!-- .box.box$*3>{box$} -->
+  <div class="box box1">box1</div>
+  <div class="box box2">box2</div>
+  <div class="box box3">box3</div>
+  <style>
+    *{margin: 0; padding: 0;}
+    /* div.box면 아래 box는 적용되지 않음 동일한 요소로 작성 */
+    .box{
+      width: 200px;
+      height: 200px;
+      margin: 50px;
+      border: 10px solid #000;
+      /* !important 적용시 최우선 적용되나 될 수 있으면 사용하지 말것 */
+      border-top-style: dotted;
+    }
+    .box1{background-color: #f00;
+      border-top-style: dashed;
+    }
+    .box2{background-color: #0f0;
+      border-color: #f0f;
+    }
+    .box3{background-color: #00f;
+      /* border-left: 0px; 적용 가능 */
+      border-left: 0px none;
+      border-right: 0px none;
+
+
+    }
+  </style>
+</body>
+</html>
