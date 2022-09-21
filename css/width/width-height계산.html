@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>width-height 계산 </title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .container{
+      width: 800px;
+      margin: 30px auto; /*블록레벨의 정렬*/
+      padding: 50px;
+      border: 1px solid #000;
+      background-color: #ccc;
+      /*overflow: hidden; */ 
+      /*부모의 요소는 넘치지 말라*/
+    }
+
+    .box{
+      background-color: #ef3;
+      width: 700px;
+      border: 10px solid #0f0;
+      padding: 50px;
+      /*margin: 100px;*/ 
+      /*자식인 박스에 margin을 주면 계산이 잘 못 될 경우가 더 많음 그러므로 부모에게 margin을 줌*/
+    }
+    .ex1 .box{
+      min-height: 50px;
+    }
+    .ex2 .box{}
+    .ex3 .box{}
+
+
+  
+
+
+  </style>
+</head>
+<body>
+  <!-- div.container.ex$*3>div.box>{내용$} -->
+  
+  <div class="container ex1">
+    <div class="box">내용1</div>
+  </div>
+  <div class="container ex2">
+    <div class="box">내용2
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, error sed! Expedita eum iusto fugiat incidunt labore molestiae hic, alias doloremque placeat voluptatem minus vel aspernatur quisquam nulla enim recusandae?
+    </div>
+  </div>
+  <div class="container ex3">
+    <div class="box">내용3</div>
+  </div>
+
+
+
+
+  
+</body>
+</html>
