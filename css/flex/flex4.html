@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex layout - flex-grow header 1row 3단 레이아웃1</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        padding: 1rem;
+        min-width: 960px;
+      }
+      .parent{
+        display: flex;
+        /*플레스아이템 주축 정렬 양끝 정렬 균등여백*/
+        justify-content: space-between;
+        /*플레스아이템 교차 가운데 정렬*/
+        align-items: center;
+
+        background-color: #ccc;
+
+      }
+      .parent .child{
+      background-color: #999;
+    }
+
+    .logo{
+      /*너비 150 높이 150*/
+      width: 150px;
+      height: 150px;
+    }
+    .navigation{
+      /*플렉스 컨테이너의 플렉스아이템 배치되고 남은 여유 공간에 맞게 해당 플렉스 아이템을 늘려줌  flex-grow: 1;*/
+      flex-grow: 1;
+      /*너비 200 글자가 세로 가운데 높이는 120*/
+      padding: 0 10px;
+      width: 200px;      
+      line-height: 120px; 
+    }
+    .navigation .inner{
+      background-color: #ef8;
+
+    }
+
+    .util-top{ /*너비 80 높이 60*/
+      width: 80px;
+      height: 60px;
+
+    }
+
+     
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="parent">
+        <div class="logo child">logo</div>
+        <div class="navigation child"><div class="inner">nav</div></div>
+        <div class="util-top child">util-top</div>
+      </header>
+    </div>
+  </body>
+</html>
