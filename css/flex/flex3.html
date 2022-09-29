@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex layout - header 1row 3단 레이아웃1</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0
+    }
+
+    .container {
+      padding: 1rem;
+      min-width: 960px;
+    }
+    .parent{
+      display: flex; 
+      background-color: #ccc;
+      /*플렉스 박스 방향 row 선언은 플렉스 박스 선언과 같음 flex-direction: row; 변화 없음*/
+      flex-direction: row;
+      /*주축의 정렬을 양끝 정렬 사이 여백 균등*/
+      justify-content: space-between;
+      /*플렉스 아이템을 교차축에 가운데 */
+      align-items: center;
+      
+    }
+    .parent .child{
+      background-color: #999;
+    }
+
+    .logo{
+      /*너비 150 높이 150*/
+      width: 150px;
+      height: 150px;
+    }
+    .navigation{ 
+      /*너비 200 글자가 세로 가운데 높이는 120*/
+      width: 200px;      
+      line-height: 120px; 
+    }
+    .util-top{ /*너비 80 높이 60*/
+      width: 80px;
+      height: 60px;
+
+    }
+
+    
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header class="parent">
+      <div class="logo child">
+        logo
+      </div>
+      <div class="navigation child">
+        nav
+      </div>
+      <div class="util-top child">
+        util-top
+      </div>
+    </header>
+  </div>
+</body>
+
+</html>
