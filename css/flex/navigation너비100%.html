@@ -20,13 +20,26 @@
 
     .parent {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
+      align-items: stretch;
       background-color: #ccc;
 
     }
 
     .navigation{
-      width:100%;
+      /*플렉스아이템*/
+      /* width:100%; 부모의 너비를 다 사용하므로 가운데 정렬이어도 한쪽으로 몰려보임 */
+      /*플렉스아이템이 컨테이너에 맞게 확장 여부*/
+      flex-grow: 0;
+      /*플렉스아이템이 컨테이너에 맞게 축소 여부*/
+      flex-shrink: 1;
+      /*플렉스아이템의 고유크기를 지정 방식
+      width/height가 지정되어 있으면  width 따르고 
+       width/height도 basis도 없을 경우 플렉스 아이템이 자식크기만큼*/
+      flex-basis: auto;
+
+      
 
     }
     .navigation> ul{
@@ -54,7 +67,7 @@
   <div class="container">
     <header class="parent">
       <div class="navigation child">
-        <ul>
+        <ul>  <!-- 여기서 ulinner같은 역활 -->
           <li><a href="">menu1</a></li>
           <li><a href="">menu2</a></li>
           <li><a href="">menu3</a></li>
