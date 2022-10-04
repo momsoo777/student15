@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>네비게이션1</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    /* .wrap{margin: 50px;} */
+    ul,ol,li{list-style: none;}
+
+    header{
+      position: relative;
+      background-color: #f8e;
+    }
+    header .header-wrap{
+      display: flex;
+      justify-content: space-between; /*양끝정렬 균등여백*/
+      align-items: center; /*교차축가운데*/
+      background-color: #fe8;
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    header .header-wrap .logo{
+      width: 120px;
+      height: 80px;
+      background-color: #000;
+    }
+    header .header-wrap nav{}
+    header .header-wrap .util{
+      /* margin-left: auto; */
+      width: 80px;
+      height: 80px;
+      background-color: #000;
+    }
+    /* .wrap{margin:0; 50px} */
+
+
+    nav{padding: 1rem;
+      background-color: #ccc;}     
+    
+     .nav-wrap {
+      padding: 1rem; background-color: #999;}
+
+    .nav-wrap >ul{
+      /*플렉스 컨테이너*/
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      background-color: #666;
+    }
+    .nav-wrap li.d1{
+      /*플렉스 컨테이너*/
+      background-color: #333;
+    }
+
+    .nav-wrap li.d1 div.d2{
+      position: absolute; /*기준요소가 누구냐에 따라 */
+      left: 0; top: 0;
+  
+    }
+     
+
+  </style>
+</head>
+<body>
+  <!--캠퍼타운 d2 스타일   -->
+  <!-- nav>.nav-wrap>ul>li.d1.menu$*4>{menu$}+.d2>ul>li.sub$*3>{sub$}  그리고 .wrap 함-->
+  <div class="wrap">
+    <header>
+      <div class="header-wrap">
+      <div class="logo">로고</div>
+      <nav>
+        <div class="nav-wrap">
+            <ul>
+              <li class="d1 menu1">
+                menu1
+                <div class="d2">
+                  <ul>
+                    <li class="sub1">sub1</li>
+                    <li class="sub2">sub2</li>
+                    <li class="sub3">sub3</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="d1 menu2">
+                menu2
+                <div class="d2">
+                  <ul>
+                    <li class="sub1">sub1</li>
+                    <li class="sub2">sub2</li>
+                    <li class="sub3">sub3</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="d1 menu3">
+                menu3
+                <div class="d2">
+                  <ul>
+                    <li class="sub1">sub1</li>
+                    <li class="sub2">sub2</li>
+                    <li class="sub3">sub3</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="d1 menu4">
+                menu4
+                <div class="d2">
+                  <ul>
+                    <li class="sub1">sub1</li>
+                    <li class="sub2">sub2</li>
+                    <li class="sub3">sub3</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="util">유틸</div>
+    </div>
+  </header>
+  </div>
+  
+</body>
+</html>
