@@ -404,3 +404,33 @@ html {
 .bx-wrapper .bx-prev:hover,
 .bx-wrapper .bx-prev:focus{
   background-position: -296px -99px;}
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+  bottom: 30px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+  width: 24px;
+  height: 4px;
+  border-radius: 0;
+  border: 0 none;
+}
+
+.swiper{
+}
+.swiper .swiper-wrapper{}
+.swiper .swiper-wrapper .swiper-slide{}
+.swiper-slide img{
+  width: 100%;
+  /* max-width: 100%; 원래 이미지 크기 이상되지 말라 */
+  height: auto;
+}
+/*가변이미지*/
+
+.swiper-button-next, .swiper-button-prev{
+  color: #fff;
+}
+.swiper-pagination-bullet {
+  background-color: var(--naver-color);
+}
