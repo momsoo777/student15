@@ -296,6 +296,7 @@ html {
     display: flex;
     justify-content: center;
     display: none; /*테스트후 삭제*/
+    z-index: 10000;
   }
 
   /*대메뉴 첫번째 .gnb_menu_list 의 서브메뉴
@@ -326,7 +327,7 @@ html {
     margin-bottom:1rem;
   }
   .gnb_dropMenu li .gnb_dropMenu_item{
-    color: #000;
+    color: #fff;
   }
 
 
