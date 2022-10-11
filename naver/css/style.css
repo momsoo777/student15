@@ -385,3 +385,52 @@ html {
   .sitemap_box .btn_sitemap span:nth-of-type(3){top: 11px; width: calc(100% - 8px);}
   .sitemap_box .btn_sitemap span:nth-of-type(4){top: 20px; width: 100%;}
 
+
+
+/*플러그인*/
+/*bxslider*/
+.bx-wrapper .bx-controls-direction a{
+  width: 46px; height: 46px;
+}
+
+.bx-wrapper .bx-prev{
+  background: url(../img/sprite.png) -296px -99px no-repeat  ;
+ 
+  /* background-image: url(../img/sprite.png);
+  background-position: -296px -99px; */
+  background-size: 474px 1500px;
+}
+
+.bx-wrapper .bx-prev:hover,
+.bx-wrapper .bx-prev:focus{
+  background-position: -296px -99px;}
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+  bottom: 30px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+  width: 24px;
+  height: 4px;
+  border-radius: 0;
+  border: 0 none;
+}
+
+.swiper{
+}
+.swiper .swiper-wrapper{}
+.swiper .swiper-wrapper .swiper-slide{}
+.swiper-slide img{
+  width: 100%;
+  /* max-width: 100%; 원래 이미지 크기 이상되지 말라 */
+  height: auto;
+}
+/*가변이미지*/
+
+.swiper-button-next, .swiper-button-prev{
+  color: #fff;
+}
+.swiper-pagination-bullet {
+  background-color: var(--naver-color);
+}
