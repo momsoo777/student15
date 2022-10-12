@@ -443,7 +443,7 @@ html {
 .swiper-pagination-bullet {
   background-color: var(--naver-color);
   border-radius: 0;
-  width: 20px; height: 4px;
+  width: 20px; height: 10px;
 }
 .swiper-pagination-bullet-active{
-  width: 20px;}
+  width: 40px;}
