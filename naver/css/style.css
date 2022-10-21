@@ -404,6 +404,7 @@ html {
 }  
 .content_summary .summary_container{
   flex-basis: 25%;
+  width: 25%;
   /* flex-grow: 0;
   flex-shrink: 1; */
   border: 1px solid #f00;
@@ -412,6 +413,7 @@ html {
 .content_summary h3.summary_title{
    font-size: 14px;
   font-weight: 800;
+  margin-bottom: 30px;
 }
 .content_summary .text_wrap{
   height: 76px;
@@ -422,13 +424,22 @@ html {
 }
 .content_summary .text_wrap .title_text strong{
   display: block; /*부모의너비를 다사용해라*/
+  /*말줄임표지정 시작*/
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  /*말줄임표지정 끝*/
   font-weight: 700;
 }
 .content_summary .text_wrap .desc_text{
-margin-bottom: 30px;
+/* 2줄이상 여러줄 상태 말줄임 */
+display: -webkit-box;
+overflow: hidden;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2; /* 숫자 몇줄지정 */
+/* 2줄이상 여러줄 상태 말줄임 */
+margin-top: 10px;
+
 }
 
 
@@ -472,9 +483,32 @@ margin-bottom: 30px;
 
  
 .content_summary .news{}
-.content_summary .career{}
+.content_summary .career{font-size: 18px;}
 .content_summary .stock1{}
-.content_summary .stock2{}
+/*162500원 선택자 */
+.content_summary .stock1 .price{
+  font-size: 36px;
+  letter-spacing: -1.7px;
+  border-bottom: 1px solid #000;
+}
+
+/*162500원의 원의 크기 */
+.content_summary .stock1 .price .unit{
+font-size: 12px;
+}
+
+/*4000원을  162500원과 같은 위치 작게 놓기 */
+.content_summary .stock1 .text_wrap{position: relative;}
+.content_summary .stock1 .text_wrap .figure{
+  position: absolute;
+  bottom: 26px; right: 0px;
+}
+
+.content_summary .stock1 .text_wrap .date{text-align: right;}
+
+
+
+.content_summary .stock2{font-size: 18px;}
 /* .main_content .content_service{}
 .main_content .content_support{} */
 /*****플러그인*****/
