@@ -572,4 +572,29 @@ font-size: 12px;
 .swiper-pagination-bullet-active{
   width: 40px;}
 
-  
+  /* 1번 .main_slide .slide_title 시작  - 과제임*/
+
+   .container .main_slide .slide_info_box{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    
+   }
+   
+   .container .main_slide .slide_text_box{position: absolute;
+       left: 160px;
+        
+  }
+   .container .main_slide .slide_text_box .slide_title strong{font-size: 36px;
+    color: #fff;
+    
+  }
+   .container .main_slide .slide_text_box .slide_text{font-size: 15px;
+    color: #fff;
+    border-top:1px solid #fff;
+  }
+
+
+  /* .main_slide .slide_title 끝 */
