@@ -509,8 +509,8 @@ font-size: 12px;
 
 
 .content_summary .stock2{font-size: 18px;}
-/* .main_content .content_service{}
-.main_content .content_support{} */
+
+
 /*****플러그인*****/
 /*플러그인*/
 /*bxslider*/
@@ -598,3 +598,74 @@ font-size: 12px;
 
 
   /* .main_slide .slide_title 끝 */
+
+  /* .main_content .content_service{}*/
+
+.main_content .content_service{}
+.service_list_container{
+  display: flex;
+  flex-wrap: wrap;
+}
+/*단(colum)의 크기는 플렉스아이템에게 줌*/
+.service_list_container .service_thumbnail_box{
+  /* flex-basis: 33.33%; */
+  /* flex: 0 1 33.33%; */ 
+  /* 플렉스 아이템의 후손의 크기가 플렉스 아이템보다 클 경우를 생각해서
+  flex-direction: row; width로 지정
+  flex-direction: colum; height로 지정 */
+
+  width: 33.33%;
+ box-sizing: border-box;
+ background-color: #ccc; /*작업후삭제*/
+ border: 1px solid #f00;  /*작업후삭제*/
+ overflow: hidden;
+}
+
+/*dimmed는 막이 생기는 형태이므로 클래스명으로 구분함*/
+.service_thumbnail_box a.thumbnail{}
+.service_thumbnail_box a.thumbnail_dimmed{  
+  position: relative;
+  color: #fff;
+  width: 100%;
+  /*너비 지정하지 않을 경우 너비-자식, 후손 크기 높이-자식, 후손크기 너비를 지정 기준 요소의 너비 -기분요소의 너비에서 높이-자식, 후손크기*/
+}
+.service_thumbnail_box a.thumbnail img{}
+.service_thumbnail_box .discription{
+  position: absolute;
+  left: 0;
+  bottom: -300px;
+  transition: bottom 0.5s;
+  padding:50px 30px 30px;
+  /*배경이미지 아이콘이 별도로 작업했다면*/
+  /* background: no-repeat url(../img/main/play_circle_FILL0_wght600_GRAD0_opsz48.png) 30px 0px; */
+ 
+  /*배경이미지 크기 지정*/
+  /* background-size: 30px 30px;
+ */}
+ .service_thumbnail_box:hover .discription{ bottom: 0;}
+ .service_thumbnail_box .discription:after{ 
+  /*sprite 작업되어 있으면 after에 주세요*/
+  content: "";
+  display: block;
+  position: absolute;
+  left: 30px; top: 0px;
+  width: 23px; height: 23px; /**/
+  background: no-repeat url(../img/sprite.png) ;
+  background-position: -199px -129px;
+  /*sprite 내 해당아이콘 */
+  }
+  
+
+.service_thumbnail_box .discription .title_text{
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.service_thumbnail_box .discription .desc_text{
+  font-size: 18px;
+  /*한줄로 말줄임표*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*.main_content .content_support{} */
