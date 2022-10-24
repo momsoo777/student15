@@ -1,6 +1,11 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@800;900&family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Raleway:wght@100;200&display=swap');
+
+
 /* font-family: 'Nanum Gothic', sans-serif; */
+
+
 /*reset*/
 * {
   -webkit-box-sizing: border-box;
@@ -36,7 +41,7 @@ select {
   margin: 0;
   padding: 0;
 }
-
+ /*여러줄 입력칸 textarea*/
 textarea {
   resize: none;
 }
@@ -46,9 +51,7 @@ input,
 textarea,
 select,
 button {
-  /* font-family: 'Nanum Gothic', sans-serif; */
-  font-family:'Nanum Gothic', "NanumSquare", "나눔고딕", "Dotum", "돋움", "Helvetica", "Arial",
-    "AppleSDGothicNeo", sans-serif;
+  font-family: "Nanum Gothic","NanumSquare", "나눔고딕", "Dotum", "돋움", "Helvetica", "Arial", "AppleSDGothicNeo", sans-serif;
   font-size: 14px;
 }
 
@@ -65,7 +68,7 @@ li,
 ol,
 ul {
   list-style: none;
-}
+} /*목록의 점 사용하지 않는다*/
 
 address,
 em,
@@ -94,12 +97,11 @@ b,
 em {
   font-weight: normal;
 }
-
 /*공통*/
 .blind {
   position: absolute;
-  /* clip: rect(0 0 0 0); */
-  left: -9999px;
+  clip: rect(0 0 0 0);
+  left:-9999px;
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -118,11 +120,10 @@ em {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-}
+} /*말 줄임 ...*/
 
 .chinese {
-  font-family: "NanumBarunGothic", "나눔바른고딕", "Dotum", "돋움", "Helvetica",
-    "Arial", "AppleSDGothicNeo", sans-serif;
+  font-family: 'NanumBarunGothic', '나눔바른고딕', 'Dotum', '돋움', 'Helvetica', 'Arial', 'AppleSDGothicNeo', sans-serif;
 }
 
 .text_line {
@@ -159,42 +160,41 @@ caption {
   font-size: 0;
 }
 
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  font-family: "NanumSquare" !important;
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  font-family: 'NanumSquare' !important;
   color: #333 !important;
 }
 
 input::-moz-placeholder {
   /* Firefox 19+ */
-  font-family: "NanumSquare" !important;
+  font-family: 'NanumSquare' !important;
   color: #333 !important;
 }
 
 input:-moz-placeholder {
   /* Firefox 18- */
-  font-family: "NanumSquare" !important;
+  font-family: 'NanumSquare' !important;
   color: #333 !important;
 }
 
 input:-ms-input-placeholder {
   /* IE 10+ */
-  font-family: "NanumSquare" !important;
+  font-family: 'NanumSquare' !important;
   color: #333 !important;
 }
 
 textarea::-moz-placeholder {
-  font-family: "NanumSquare" !important;
+  font-family: 'NanumSquare' !important;
   color: #333 !important;
 }
 
 textarea:-moz-placeholder {
-  font-family: "NanumSquare" !important;
+  font-family: 'NanumSquare' !important;
   color: #333 !important;
 }
 
 textarea:-ms-input-placeholder {
-  font-family: "NanumSquare" !important;
+  font-family: 'NanumSquare' !important;
   color: #333 !important;
 }
 
@@ -243,7 +243,7 @@ html {
     width: 87px;
     height: 17px;
     background-size: contain;
-    
+    background-color: #ccc;
    
 
 
@@ -277,7 +277,7 @@ html {
     color: #000;
   }
   nav .gnb_menu_list .gnb_menu_item:after{
-    content: "";
+    content: ' ';
     display: block;
     position: absolute; /*기준요소*/
     left: 0;
@@ -344,13 +344,12 @@ html {
       display: flex;}
     /* background-color: #999; 작업후 삭제 */
   .header_util .header_lang{}
-
   .header_lang a{
-    color: #000; /*수정*/
+    color: #000;
     font-size: 0.8rem;
   }
   .header_lang a[aria-selected="false"]{
-    opacity: 0.5; /*추가*/
+    opacity: 0.5;
   }
   .header_lang a:first-child{
     position: relative;/*after의 기준요소*/
@@ -358,7 +357,7 @@ html {
     
   }
   .header_lang a:first-child:after{
-    content: "";
+    content: '';
     display: block;
     position:absolute;
     top: 0; left:36px;
@@ -393,10 +392,8 @@ html {
   .sitemap_box .btn_sitemap span:nth-of-type(3){top: 11px; width: calc(100% - 8px);}
   .sitemap_box .btn_sitemap span:nth-of-type(4){top: 20px; width: 100%;}
 
-/* .main_content */
-.main_content{
-  padding:120px 150px;}
-    /*.main_content*/ /* ul.content_summary*/
+
+  /*.main_content*/ /* ul.content_summary*/
 .main_content ul.content_summary{
   display: flex;
   /* flex-direction: row;
@@ -515,6 +512,33 @@ font-size: 12px;
 
 
 
+  /* 1번 .main_slide .slide_title 시작  - 과제임*/
+
+   .container .main_slide .slide_info_box{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    
+   }
+   
+   .container .main_slide .slide_text_box{position: absolute;
+       left: 160px;
+        
+  }
+   .container .main_slide .slide_text_box .slide_title strong{font-size: 36px;
+    color: #fff;
+    
+  }
+   .container .main_slide .slide_text_box .slide_text{font-size: 15px;
+    color: #fff;
+    border-top:1px solid #fff;
+  }
+
+
+  /* .main_slide .slide_title 끝 */
+
   /* .main_content .content_service{}*/
 
 .main_content .content_service{
@@ -573,17 +597,12 @@ z-index: 10;
 .service_thumbnail_box a.thumbnail img{
  /* max-width: 100%; 원본보다커지지말아라*/
  width: 100%;  /* 이미지를 감싸고 있는 요소의 크기를 따라라*/
-  height: auto; /* 이미지의 너비가 변경되는 것에 맞게 높이 자동
-  기존의 가로:세로의 비율을 유지 */
+  height: auto; /* 이미지의 너비가 변경되는 것에 맞게 */
 }
 .service_thumbnail_box .discription{
   position: absolute;
-  z-index: 20;
-  width: 100%;
-  /* 너비 지정하지 않을경우 너비-자식,후손 크기 높이-자식,후손크기 
-       너비를 지정 기준요소의 너비 -기분요소의 너비에서 높이-자식,후손크기
-   */
-  left: 0;   bottom: -300px;
+  left: 0;
+  bottom: -300px;
   transition: bottom 0.5s;
   padding:50px 30px 30px;
   /*배경이미지 아이콘이 별도로 작업했다면*/
@@ -591,7 +610,7 @@ z-index: 10;
  
   /*배경이미지 크기 지정*/
   /* background-size: 30px 30px; 
- */ 
+ */ z-index: 20;
 }
  .service_thumbnail_box:hover .discription{ bottom: 0;}
  .service_thumbnail_box .discription:after{ 
@@ -600,10 +619,10 @@ z-index: 10;
   display: block;
   position: absolute;
   left: 30px; top: 0px;
-  width: 23px; height: 23px; /*sprite 내 해당아이콘 크기 */
+  width: 23px; height: 23px; /**/
   background: no-repeat url(../img/sprite.png) ;
   background-position: -199px -129px;
-  /*sprite 내 해당아이콘 위치 */
+  /*sprite 내 해당아이콘 */
   }
   
 
@@ -624,43 +643,22 @@ z-index: 10;
 /*****플러그인*****/
 /*플러그인*/
 /*bxslider*/
-
-.bx-wrapper {
-  overflow: hidden;
-}
 .bx-wrapper .bx-controls-direction a{
   width: 46px; height: 46px;
 }
 
 .bx-wrapper .bx-prev{
-  /* 이미지 사용
-    background:url(../img/sprite.png) -296px -99px no-repeat;
-    background-size: 474px 1500px;*/
-    background-image: none;
-    border-left: 1px solid #fff;
-    border-top: 1px solid #fff;
-    transform: rotate(-45deg) translate(0, -50%);
-    transform-origin: 0 0;
-    left: 45px;
-}
-.bx-wrapper .bx-next {
-  background-image: none;
-  border-left: 2px solid #fff;
-  border-top: 2px solid #fff;
-  transform: rotate(135deg) translate(0, 50%);
-  transform-origin: 0 0;
-  right: -25px;
+  background: url(../img/sprite.png) -296px -99px no-repeat  ;
+ 
+  /* background-image: url(../img/sprite.png);
+  background-position: -296px -99px; */
+  background-size: 474px 1500px;
 }
 
 .bx-wrapper .bx-prev:hover,
 .bx-wrapper .bx-prev:focus{
   background-position: -296px -99px;}
 
-  .bx-wrapper .bx-next:hover,
-.bx-wrapper .bx-next:focus {
-  background-image: none;
-}
-/* pagination pager변경 */
 .bx-wrapper .bx-pager,
 .bx-wrapper .bx-controls-auto {
   bottom: 30px;
@@ -673,20 +671,16 @@ z-index: 10;
   border: 0 none;
 }
 
-/* 플러그인 */
-/* swiper */
-
 .swiper{
 }
 .swiper .swiper-wrapper{}
 .swiper .swiper-wrapper .swiper-slide{}
 .swiper-slide img{
-  /*가변이미지*/
   width: 100%;
   /* max-width: 100%; 원래 이미지 크기 이상되지 말라 */
   height: auto;
 }
-
+/*가변이미지*/
 
 .swiper-button-next, .swiper-button-prev{
   color: #fff;
