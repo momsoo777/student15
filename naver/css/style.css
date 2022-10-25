@@ -410,8 +410,22 @@ html {
   width: 25%;
   /* flex-grow: 0;
   flex-shrink: 1; */
-  border: 1px solid #f00;
-  padding-right: 50px;
+  padding: 0 50px;
+  position: relative;
+}
+
+.content_summary .summary_container:first-child{
+  padding-left: 0;
+}
+.content_summary .summary_container::after{
+content: '';
+position: absolute;
+right: 0; top: 0;
+width: 1px; height: 100%;
+background-color: #e5e5e5;
+}
+.content_summary .summary_container:last-child:after{
+  display: none;
 }
 .content_summary h3.summary_title{
    font-size: 14px;
@@ -486,7 +500,7 @@ margin-top: 10px;
 
  
 .content_summary .news{}
-.content_summary .career{font-size: 18px;}
+.content_summary .career .text_wrap{font-size: 18px;}
 .content_summary .stock1{}
 /*162500원 선택자 */
 .content_summary .stock1 .price{
@@ -511,7 +525,7 @@ font-size: 12px;
 
 
 
-.content_summary .stock2{font-size: 18px;}
+.content_summary .stock2 .text_wrap{font-size: 18px;}
 
 
 
@@ -538,14 +552,14 @@ font-size: 12px;
 }
 
 /*dimmed는 막이 생기는 형태이므로 클래스명으로 구분함*/
-.service_thumbnail_box a.thumbnail{}
-.service_thumbnail_box a.thumbnail_dimmed{  
+.service_thumbnail_box .thumbnail{}
+.service_thumbnail_box .thumbnail_dimmed{  
   position: relative;
   color: #fff;
   width: 100%;
   /*너비 지정하지 않을 경우 너비-자식, 후손 크기 높이-자식, 후손크기 너비를 지정 기준 요소의 너비 -기분요소의 너비에서 높이-자식, 후손크기*/
 }
-.service_thumbnail_box a.thumbnail_dimmed:after{
+.service_thumbnail_box .thumbnail_dimmed:after{
 content: "";
 display: block;
 position: absolute;
@@ -556,21 +570,24 @@ opacity: 0;
 transition: opacity 0.2s;
 z-index: 10;
 }
-.service_thumbnail_box:hover a.thumbnail_dimmed:after{
+.service_thumbnail_box:hover .thumbnail_dimmed:after{
   opacity: 1;
 }
 
-.service_thumbnail_box a.thumbnail{
+.service_thumbnail_box .thumbnail{
   /*.service_thumbnail_box요소에서 마우스 아웃 상태일때*/
   width: 100%;
   transform: scale(1);
   transition: all 0.5s;
 }
-.service_thumbnail_box:hover a.thumbnail{
-  /*.service_thumbnail_box요소에서 마우스 hover 상태일때*/
-  transform: scale(1.2);
-}
-.service_thumbnail_box a.thumbnail img{
+li.service_thumbnail_box:hover .thumbnail{
+  /* .service_thumbnail_box 요소에서 
+  마우스 hover 상태의 일때 
+  .thumbnail
+  */
+  transform:scale(1.2);
+ }
+.service_thumbnail_box .thumbnail img{
  /* max-width: 100%; 원본보다커지지말아라*/
  width: 100%;  /* 이미지를 감싸고 있는 요소의 크기를 따라라*/
   height: auto; /* 이미지의 너비가 변경되는 것에 맞게 높이 자동
@@ -620,7 +637,113 @@ z-index: 10;
 }
 
 /*.main_content .content_support{} */
+.main_content .content_support{
+  /* .content_support위 바깥여백 150px */
+  margin-top: 150px;
+  text-align: center;
+  }
+  .content_support .support_title{
+    position: relative; /*****중요****/
+    /* 글자크기 32px 색상 #333 */
+    font-size: 32px;
+    color: #333;
+    /* 아래여백 20px */
+    margin-bottom: 20px;
+     }
 
+  .content_support .support_title:after{
+   /*****선을 가운데 넣을때 사용한 css****/
+    content: ''; /*****중요****/
+    position: absolute; /*****중요****/
+    left: 50%; bottom: 0px; /*****중요****/
+    width: 5rem; height: 2px;
+    background-color: var(--naver-color);
+    /* x좌표 값 본인 크기의 반이 왼쪽으로 이동 */
+    transform: translateX(-50%); /*****중요****/
+  }
+
+  .content_support .support_text{
+    font-size: 18px;
+    line-height: 1.6; /*자간 줄 높이*/
+    color: #000;    
+  }
+
+  .content_support .support_list_container{
+    margin-top: 120px;
+    display: flex;  /*li 4단 레이아웃 만들기 아래는 기본으로 가지만 연습삼아 꼭 같이 작성하기*/
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-content: stretch;
+   
+  }
+  .content_support .support_list_box{   
+   /* flex-basis: 25%; */
+    width: 25%; /*4단 25%  2단 50% 3단 33.33%로 조정*/
+    box-sizing: border-box;
+    position: relative;
+
+  }
+  .content_support .support_list_box::after{
+    content: '';
+    position: absolute; 
+    right: 0; top: 0;
+    width: 1px; height: 100%;
+    background-color: #e5e5e5;
+     }
+
+  .content_support .support_list_box:last-child:after{
+    display: none; /*마지막 줄 제거 화면에 표시하지 마세요*/}
+  .content_support .support_list_box a{
+    /* bgi용 */
+    display: block;
+    padding: 135px 10px 0;
+    position: relative;
+  }
+   
+
+  .content_support .support_list_box a:after{
+    content: '';
+    position: absolute;
+    left: 50%; top: 0;
+    height: 100px;
+    background:transparent no-repeat url(../img/sprite.png);
+    transform: translateX(-50%);
+  }
+
+  .content_support .support_list_box:nth-child(1) a::after{ width: 87px;
+    background-position: 0 -957px;
+  }
+  .content_support .support_list_box:nth-child(2) a:after{width: 101px;
+    background-position: -92px -957px;
+  }
+  .content_support .support_list_box:nth-child(3) a:after{width: 110px;
+    background-position: -199px -957px;
+  }
+  .content_support .support_list_box:nth-child(4) a:after{width: 93px;
+    background-position: -316px -957px;
+  }
+
+.content_support .support_list_box .description{}
+.content_support .support_list_box a .title_text{
+  color: var(--naver-color);
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/*a태그 후버하면 dt 밑줄 문자 생기게 하는 선택자 css 속성지정*/
+
+.content_support .support_list_box a:hover .title_text{
+  text-decoration: underline;
+}
+
+.content_support .support_list_box a .desc_text{
+  color: #878890;
+  line-height: 1.6;
+  font-size: 15px;
+}
+  
 /*****플러그인*****/
 /*플러그인*/
 /*bxslider*/
@@ -673,7 +796,7 @@ z-index: 10;
   border: 0 none;
 }
 
-/* 플러그인 */
+/* //플러그인 */
 /* swiper */
 
 .swiper{
