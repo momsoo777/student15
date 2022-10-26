@@ -221,13 +221,21 @@ html {
     height: var(--header-height);
     background-color: rgba(255,255,255,0.7);
   }
+  
+  .main_content{}
+
+  footer{background-color: rgba(0,0,0,0.3);}
+
+  header .header_wrap,
+  footer .footer_wrap
+  {max-width: 1600px;
+   margin: 0 auto;
+  }
 
     .header_wrap {
       display: flex;
       justify-content: space-between; /*양끝 정렬 여백균등*/
-      align-items: center; /*교차축 가운데*/
-      margin: 0 auto;
-      max-width: 1600px;
+      align-items: center; /*교차축 가운데*/          
     }
 
 
@@ -795,6 +803,21 @@ li.service_thumbnail_box:hover .thumbnail{
   border-radius: 0;
   border: 0 none;
 }
+
+ /**
+  footer
+  **/
+  footer{}
+  footer .footer_wrap{
+    display: flex;
+  }
+  .footer_wrap .flex_item{
+    width:25%;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #000;
+  }
+
 
 /* //플러그인 */
 /* swiper */
