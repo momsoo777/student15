@@ -7,44 +7,35 @@
   <title>base스킨 로고수정</title>
 </head>
 <body>
-  <span class="top_logo.fleft a">
-    <a href="/index.html" class="hide-text">nicelookQueen</a>
-    </span>
-
-   
-    <p class="top_logo.fleft a"> 
-      <span class="visually-hidden"> nicelookQueen</span>
-    </p>
-  
-
+  <a href="/index.html"><span class="visually-hidden">nicelookqeu</span></a>
+    
     
     <style>
-      .hide-text{
-        text-indent: 100%;
-        overflow: hidden;
-        white-space: nowrap;
-      }
-
+  
       /*텍스트를 요소로 감싸고 있을 때*/
-    .visually-hidden{
-    position: absolute;
-    clip: rect(0 0 0 0);
-     width: 1px;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    white-space: nowrap;
-  }
+   
+  .visually-hidden{
+  position: absolute;
+  clip: rect(0 0 0 0);
+   width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+ .top_logo.fleft a{
 
-      .top_logo.fleft a{
-        display: block;
-        width: 270px; height: 70px; /*배경이미지 크기*/
+        width: 300px; height: 100px; /*배경이미지 크기*/
         background-position: 0 0;
         background-repeat: no-repeat;
-        background-image: url(../smimg/nlq-logo-g.png);
-        /* margin: 0 auto; 로고 가운데 정렬 } */
+        background-image: url(/smimg/nlq-logo-g.png);
+         background-size:cover; 
+         margin-bottom:  30px;
+         
+        }
 
-    
+         /* 배너이미지 용 */
+        .banner{background-image: url(/smimg/footer-banner.jpg);}
     </style>
 </body>
 </html>
