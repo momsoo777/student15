@@ -224,11 +224,11 @@ html {
   
   .main_content{}
 
-  footer{background-color:#f8f8f8;}
+  footer{background-color:rgba(0, 0, 0, 0.3);}
 
   header .header_wrap,
   footer .footer_wrap
-  {max-width: 1300px;
+  {max-width: 1600px;
    margin: 0 auto;
   }
 
@@ -251,6 +251,7 @@ html {
     width: 87px;
     height: 17px;
     background-size: contain;
+    
     
    
 
@@ -338,7 +339,7 @@ html {
     padding: 0.2rem 0;
   }
   .gnb_dropMenu li.depth_blank{
-    margin-bottom:1rem;
+    margin-bottom: 1rem;
   }
   .gnb_dropMenu li .gnb_dropMenu_item{
     color: #fff;
@@ -414,12 +415,13 @@ html {
   padding: 120px 150px;
 }  
 .content_summary .summary_container{
+  position: relative;
   flex-basis: 25%;
   width: 25%;
   /* flex-grow: 0;
   flex-shrink: 1; */
   padding: 0 50px;
-  position: relative;
+  
 }
 
 .content_summary .summary_container:first-child{
@@ -852,7 +854,7 @@ li.service_thumbnail_box:hover .thumbnail{
   }
   .footer_wrap .footer_menu li a{}
 
-  .footer_wrap .affiliate_box{
+  .footer_wrap .affiliate_box {
     position: relative;
     order: 1; /*자회사바로가기 자리 옮김, 자리를 바꿀때 사용 flex강의 참고*/ 
     /*flex5 자회사바로가기 여백 잡기 자리 잡기 참고*/
@@ -872,12 +874,12 @@ li.service_thumbnail_box:hover .thumbnail{
     /* border: 1px solid #999;     */
   }
 
-  .footer_wrap .affiliate_box .affiliate_list .affiliate_item{}
-  .affiliate_box .affiliate_list .affiliate_item a{
+ .affiliate_box .affiliate_list .affiliate_item{}
+  .affiliate_box .affiliate_item a{
     color: #999;
     font-size: 0.7rem;
   }
-  .affiliate_box .affiliate_list .affiliate_item a:hover{
+  .affiliate_box .affiliate_item a:hover{
     color: var(--naver-color);
   }
 
