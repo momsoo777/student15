@@ -224,11 +224,11 @@ html {
   
   .main_content{}
 
-  footer{background-color: rgba(0,0,0,0.3);}
+  footer{background-color:#f8f8f8;}
 
   header .header_wrap,
   footer .footer_wrap
-  {max-width: 1600px;
+  {max-width: 1300px;
    margin: 0 auto;
   }
 
@@ -814,12 +814,14 @@ li.service_thumbnail_box:hover .thumbnail{
   footer .footer_wrap{
     display: flex;   
     position: relative;
+    justify-content: flex-start;
+    align-items: center;
   }
   .footer_wrap .flex_item{
     /* width:25%; 자리 잡고 삭제용*/
     box-sizing: border-box;
     background-color: #fff;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
   }
 .footer_wrap .footer_logo{
   /* 플레스 아이템 고유 크기 지정 */
@@ -851,20 +853,38 @@ li.service_thumbnail_box:hover .thumbnail{
   .footer_wrap .footer_menu li a{}
 
   .footer_wrap .affiliate_box{
+    position: relative;
     order: 1; /*자회사바로가기 자리 옮김, 자리를 바꿀때 사용 flex강의 참고*/ 
     /*flex5 자회사바로가기 여백 잡기 자리 잡기 참고*/
     margin-left: auto; /****중요*****/
     /* 플렉스컨테이너의 남은 공간을 알아서 여백으로 왼쪽으로 주세요. 단 width의 크기가 설정되지 않게 삭제하고 margin: auto;줄 것  width 지정 x 단컬럼지정 % 지정하지 말고 고유 크기 지정 , flex-basis:auto;*/
 
   }
-  .footer_wrap .affiliate_box ul{
-    display: none;
+  .footer_wrap .affiliate_box .affiliate_list{
+    display: none; 
+    /*스크립트 이용해서 표시*/
+    position: absolute; /*요소와 요소 겹침 기준요소 .affiliate_box*/
+    width: 200px;
+    left: -20px; bottom: -10px;
+    padding: 1.5rem 1rem;
+
+    background-color: #fff; /*나중에 삭제*/
+    /* border: 1px solid #999;     */
   }
+
+  .footer_wrap .affiliate_box .affiliate_list .affiliate_item{}
+  .affiliate_box .affiliate_list .affiliate_item a{
+    color: #999;
+    font-size: 0.7rem;
+  }
+  .affiliate_box .affiliate_list .affiliate_item a:hover{
+    color: var(--naver-color);
+  }
+
  .footer_wrap .footer_copy{
   position: absolute;
   left: 50% ; top: 0;
-  transform: translateX(-50%);
-  
+  transform: translateX(-50%);  
  }
 
 
@@ -903,3 +923,27 @@ li.service_thumbnail_box:hover .thumbnail{
 }
 .swiper-pagination-bullet-active{
   width: 40px;}
+
+  /*반응형 웹 설정*/
+  /*desktop에만 보이는 desktop-only*/
+  .desktop-only{display: block;}
+  @media(max-width:1199.98px){
+    .desktop-only{display: none;}
+  }
+  /* 768px 이하의 스크린에서 보일 css */
+  @media (max-width:767.98px){
+    
+  }/*  @media (max-width:767.98px) */
+  /* 1200 이하의 스크린에서 보일 css */
+  @media (max-width:1199.98px){
+    header .header_wrap,
+  footer .footer_wrap
+  {max-width: none;
+   margin: 0 50px;
+  }
+  }
+
+  
+
+   
+  /* @media (max-width:199.98px) */
