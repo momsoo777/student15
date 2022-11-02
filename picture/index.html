@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index-picture</title>
+</head>
+<body>
+  <h1>
+    picture 태그
+  </h1>
+  <hr>
+  <p class="desc">
+    사진,이미지등을 반응형으로 넣을 때 사용
+  </p>
+  <div class="picture_wrap">
+    <picture>
+      <source srcset="./img/img_480x800.jpg" media="(max-width: 576px)">
+      <source srcset="./img/img_768x768.jpg" media="(max-width: 768px)">
+      <source srcset="./img/img_1920x810.jpg" media="(max-width: 1024px)">
+      <img src="img/img_1920x810.jpg" alt="이미지 설명">
+    </picture>
+  </div>
+
+  <style>
+    *{margin: 0; padding: 0;} /*복사하는 거 아님*/
+    *{box-sizing: border-box;}
+    /*가변이미지 블록레벨요소를 부모로 하고 자식요소를 img요소로
+    부모요소 블록요소 너비지정 , 자식 요소 img 부모의 너비를 따르게 함*/
+    h1{position: absolute; 
+    width: 100%;
+  height: 50px;
+   line-height: 50px;
+   background-color: rgba(255,255,255,0.5);}
+   p.desc{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.5);
+   }
+    .picture_wrap{ width: 100%; height: 100vh;}    
+    .picture_wrap picture img{
+      object-fit: cover;
+      object-position: left center;
+      width:100%; height: 100%;
+    
+    /* max-width: 100%; 이미지 크기보다 커지지 말아라*/
+  }
+
+
+
+    </style>
+</body>
+</html>
