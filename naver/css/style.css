@@ -224,11 +224,11 @@ html {
   
   .main_content{}
 
-  footer{background-color:rgba(0, 0, 0, 0.3);}
+  footer{background-color:#f8f8f8;}
 
   header .header_wrap,
   footer .footer_wrap
-  {max-width: 1600px;
+  {max-width: 1300px;
    margin: 0 auto;
   }
 
@@ -822,7 +822,7 @@ li.service_thumbnail_box:hover .thumbnail{
   .footer_wrap .flex_item{
     /* width:25%; 자리 잡고 삭제용*/
     box-sizing: border-box;
-    background-color: #fff;
+    /* background-color: #fff; */
     /* border: 1px solid #000; */
   }
 .footer_wrap .footer_logo{
@@ -874,12 +874,13 @@ li.service_thumbnail_box:hover .thumbnail{
     /* border: 1px solid #999;     */
   }
 
- .affiliate_box .affiliate_list .affiliate_item{}
-  .affiliate_box .affiliate_item a{
+  .footer_wrap .affiliate_box .affiliate_list .affiliate_item{}
+
+  .footer_wrap .affiliate_box .affiliate_list .affiliate_item a{
     color: #999;
     font-size: 0.7rem;
   }
-  .affiliate_box .affiliate_item a:hover{
+  .footer_wrap .affiliate_box .affiliate_list .affiliate_item a:hover{
     color: var(--naver-color);
   }
 
