@@ -39,18 +39,18 @@
     .my-dan.padding10 .my-row .my-col{padding:0 10px;}
     .my-dan.padding20 .my-row .my-col{padding:0 20px;}
 
-    .my-dan .my-row .my-col-inner{   
+    .my-dan .my-row .my-col-inner{ 
+      position: relative;
+      transform: scale(1);
+  transition: all 0.5s;  
+  z-index: 100; 
     }
     .my-dan .my-row .my-col-inner img{width:100%; height: auto; display: block;
-      transform: scale(1);
-  transition: all 0.5s;}
-    .my-dan .my-row .my-col-inner img:hover{ transform:scale(1.2);}
+      }
+    .my-dan .my-row .my-col-inner:hover { transform:scale(1.2); z-index: 1000;}
 
     *{margin: 0; padding: 0;}
-    .wrap{
-      margin: 50px;
-      background-color: #ccc;
-    }
+    .wrap{margin: 50px; background-color: #ccc;}
 
     /* //단스타일 22.10.28 추가완료 */
 
