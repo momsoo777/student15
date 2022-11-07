@@ -1,0 +1,45 @@
+
+
+  /* easy */
+  #header{
+    background-color: rgba(255,0,0.,0.5) !important;
+    border-bottom: 1px solid #e8e8e8 !important;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
+  }
+  #header.fixed{
+    border-bottom: 1px solid #e8e8e8 !important;
+  }
+  #header .inner .top_nav_box{
+    background-color: transparent !important;
+  }
+
+  /* ibase */
+  #header{
+    background-color: rgba(255,0,0.,0.5) !important;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
+  }
+
+  #header.fixed .navigation{
+    background-color: transparent !important;
+  }
+  /* no3 */
+  .Dr_Top_Wrap{
+    background-color: rgba(255,0,0.,0.5) !important;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
+  }
+
+ /* myshop 실 적용  */
+  .Dr_Top_Wrap{
+    background-color: rgba(255, 255, 255, 0.7) !important;
+    border: 1px solid #9b9999;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
+  }
+
+
+  #header{background-color: rgba(255, 255, 255, 0.7) !important;
+    border: 1px solid #9b9999;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);} 
+   /* 두배너가 겹쳐져 선택자 찾아서 하나더 색지정 단 겹쳐저 색이 진해질때는 하나는 아예 투명색 만들기  */
+   #header.fixde{background-color: transparent !important;} 
+  
