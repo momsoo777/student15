@@ -25,7 +25,7 @@ background: #000;
 }
 
 [class^='btnNormal']:not(.disabled):hover, [class^='btnNormal']:not(.disabled).selected {
-  border-color: #000;
+  border-color: #000;!important
 }
 
 
