@@ -5,7 +5,7 @@ border-top: none;
 border-bottom: none;}
 
 #footer .inner {position: relative; max-width:1680px;width:92%;margin:0 auto;padding:100px 0 100px 150px; 
-  color:#fff;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;flex-direction:row;
+  color:#fff;display:flex;align-items:flex-start;justify-content:flex-start;flex-wrap:wrap;flex-direction:row;
 
   }
   #footer:before{border-bottom: none;}
@@ -33,7 +33,7 @@ border-bottom: none;}
 
 /* footer bt-wrap */
 #footer .bt-wrap{ 
- 
+ margin-left: auto;
 }
 #footer .footer_center{display: flex;
 }
