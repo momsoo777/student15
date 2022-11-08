@@ -495,8 +495,9 @@ margin-top: 10px;
   left:50%; top:50%; /*부모요소의 가운데 시작*/
   transform: translate(-50%, -50%);/*자기의 크기 반만큼 이동*/
   width:5px; height: 8px;/*after,before 는 크기지정*/
-  background: url(/smimg/aboutimg/sprite.png) no-repeat;
+   background: no-repeat url(../img/sprite.png);
   background-position: -102px -50px;
+ 
 }
 
 
@@ -558,6 +559,7 @@ font-size: 12px;
   width: 33.33%;
   box-sizing: border-box; 
   overflow: hidden;
+  
 }
 
 /*dimmed는 막이 생기는 형태이므로 클래스명으로 구분함*/
@@ -612,9 +614,9 @@ li.service_thumbnail_box:hover .thumbnail{
   left: 0;   bottom: -300px;
   transition: bottom 0.5s;
   padding:50px 30px 30px;
-  /*배경이미지 아이콘이 별도로 작업했다면*/
- background: no-repeat url(/smimg/aboutimg/free-icon-font-angle-small-right-3916869.png) 30px 0px;
- 
+   /*배경이미지 아이콘이 별도로 작업했다면*/
+ /* background: no-repeat url(/smimg/aboutimg/free-icon-font-angle-small-right-3916869.png) 30px 0px;
+  */
   /*배경이미지 크기 지정*/
   /* background-size: 30px 30px; 
  */ 
@@ -627,15 +629,15 @@ li.service_thumbnail_box:hover .thumbnail{
   position: absolute;
   left: 30px; top: 0px;
   width: 23px; height: 23px; /*sprite 내 해당아이콘 크기 */
-  /* background: no-repeat url(/smimg/aboutimg/sprite.png) ;
-  background-position: -199px -129px;*/
+  background: no-repeat url(../img/sprite.png) ;
+  background-position: -199px -129px;
   /*sprite 내 해당아이콘 위치 */
   }
   
 
 .service_thumbnail_box .discription .title_text{
   font-size: 28px;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 .service_thumbnail_box .discription .desc_text{
   font-size: 18px;
@@ -716,7 +718,7 @@ li.service_thumbnail_box:hover .thumbnail{
     position: absolute;
     left: 50%; top: 0;
     height: 100px;
-    /*background:transparent no-repeat url(../img/sprite.png);*/
+    /* background:transparent no-repeat url(../img/sprite.png); */
     transform: translateX(-50%);
   }
 
