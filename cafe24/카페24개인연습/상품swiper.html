@@ -6,15 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    /*상품목록 추천상품 */
-xans-product-listrecommend{ position:relative;}
-.listrecommend-swiper{ width: 85%;}
-.listrecommend-swiper .ec-base-product .prdList{ width:100%;}
-. xans-product-listrecommend .swiper-button-next, 
-. xans-product-listrecommend .swiper-button-prev{
-color:rgb(255, 0, 221);
-
+   /* 추천상품슬라이드 22.11.07*/
+.xans-element- xans-product xans-product-listrecommend ec-base-product{ position:relative;}
+.swiper listrecommend-swiper{ width: 85%;}
+.swiper listrecommend-swiper .ec-base-product .prdList{ width:100%;}
+.ec-base-product .swiper-button-next, 
+.ec-base-product .swiper-button-prev{color:#cebb98; opacity: 0.8;
 }
+.ec-base-product .swiper-button-next{right: 93px;}
+.ec-base-product .swiper-button-prev{left: 93px;}
+
+.ec-base-product .swiper-button-next:hover,
+.ec-base-product .swiper-button-next:focus,
+.ec-base-product .swiper-button-prev:after,
+.ec-base-product .swiper-button-prev:hover,
+{opacity: 1; transition: color 0.2s;}
+
+.swiper-pagination .swiper-pagination-bullet-active{background-color:#cebb98;}
+
+/* //추천상품슬라이드 22.11.04*/
   </style>
 </head>
 <body>
@@ -47,7 +57,44 @@ color:rgb(255, 0, 221);
                       </div>
                   </div>
               </div>
-
+              <div class="description">
+                <span class="chk"><input type="checkbox" class="{$product_compare_class} {$product_compare_display|display}" /></span>
+                <strong class="name"><a href="{$link_product_detail}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                <ul module="product_ListItem" class="spec">
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                </ul>
+            </div>
+        </li>
+        <li id="anchorBoxId_{$product_no}"class="swiper-slide" >
+            <div class="thumbnail">
+                <div class="prdImg">
+                    <a href="{$link_product_detail}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" /><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+                    <span class="wish">{$list_wish_icon}</span>
+                </div>
+                <div class="icon">
+                    <div class="promotion">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon} {$benefit_icons}</div>
+                    <div class="button">
+                       <div class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon} <strong>{$disp_likeprd_count}</strong></button></div>
+                       <div class="option">{$option_preview_icon}</div> {$basket_icon} {$zoom_icon}
+                    </div>
+                </div>
+            </div>
+            <div class="description">
+                <span class="chk"><input type="checkbox" class="{$product_compare_class} {$product_compare_display|display}" /></span>
+                <strong class="name"><a href="{$link_product_detail}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                <ul module="product_ListItem" class="spec">
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+        <div class="swiper-pagination"></div>
+</div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div> <!--//추천상품슬라이드22.11.04-->
 
     <!--추천상품슬라이드-->
 <script>
@@ -79,9 +126,7 @@ href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
 
 
 
-
-
-  <!-- list.html(상품분류) 파일 </body> 앞에 작업 -->
+  
   
 </body>
 </html>
