@@ -41,8 +41,9 @@ background: #000;
 .xans-product-detail .eventArea h3 {color: #707070 !important;}
 .xans-coupon-productdetailajax> .title h3{color: #707070 !important;}
 
-/*팝업 버튼 크기 조정 22.11.08*/
-.app-smart-popup .smart-popup-btns button{height: 20%;} 
+/*팝업 버튼 크기 조정 22.11.09*/
+.app-smart-popup .smart-popup-btns {height: 37px;}
+.app-smart-popup .smart-popup-btns button.smart-popup-close {height: 37px;}
 
 .Dr_Top_Bg {height: 160px;}
 
@@ -61,9 +62,79 @@ div.ec-base-help ol li { padding:0 0 0 25px; /*background:url('//img.echosting.c
 /* 로그인 비회원로그인 수정 22.11.08*/
 .ec-base-box.typeThin {border-width: 20px;}
 
+/*상품 진열 라인과 돋보기 숨김 22.11.09*/
+.ec-base-product .prdList .thumbnail .button {display: none;}
+.ec-base-product .prdList .thumbnail .icon {border-bottom: none;}
+
+.banner{background-image: url(/smimg/nlq-logo-g.png);}
+
+/* 상단 백그라운드 높이 조정 22.11.08 추가 */
+.Dr_Top_Bg {height: 160px;}
+
+.Dr_Top_Wrap .Dr_Top_Inner {padding-top: 35px; padding-bottom: 35px;}
+
+/* input 체크박스 숨김  22.11.09 */
+.ec-base-product input[type=radio], input[type=checkbox]{display: none;}
+
+/* .swiper 프로모션이미지 숨김  22.11.09 */
+.swiper .promotion img{display: none;}
+
+/* main 프로모션이미지 숨김  22.11.09 */
+.maincont .prdList .thumbnail .promotion img{display: none;}
+
+
+
+/* about swiper2  22.11.09 추가 */
+.swiper .myswiper{}
+.swiper .swiper-wrapper{}
+.swiper .swiper-wrapper .swiper-slide{}
+.swiper .swiper-slide img{  
+  width: 100%;  
+  height: auto;
+}
+
+
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev{color: #fff; opacity: 0.5;}
+
+.swiper .swiper-button-next:hover, 
+.swiper .swiper-button-next:focus,
+.swiper .swiper-button-prev:hover, 
+.swiper .swiper-button-prev:focus{
+  opacity: 1;
+  transition: color 0.2s;}
+
+.swiper .swiper-pagination-bullet{
+  background-color: #cebb98;
+  border-radius: 0;
+  width: 20px; height: 10px;
+}
+.swiper .swiper-pagination-bullet-active{
+  width: 40px;}
+
+
+  .app-smart-popup .smart-popup-btns {
+    border:none;
+    background-color: #000;
+    opacity: 0.8;
+}
+ 
+.app-smart-popup .smart-popup-btns button.smart-popup-close {
+   border-left: #fff;
+   }
+  .app-smart-popup .smart-popup-btns button.smart-popup-close:hover {
+    background-color: #000;
+    opacity: 1;
+}
+
+.app-smart-popup .smart-popup-btns button {
+    color: #fff;
+}
   </style>
 </head>
 <body>
   
 </body>
 </html>
+
+

@@ -29,3 +29,22 @@ to { opacity:1; transform:translate3d(0,0,0); -webkit-transform:translate3d(0,0,
 </body>
 
 
+<!--common js.css 43번줄에 아래 링크 추가 -->
+
+$('#go_btn_top').click(function () {
+  $('body,html').animate({
+     scrollTop:0
+  }, 500);
+   return false;
+});      
+
+$('#go_btn_bottom').click(function () {
+  $('body,html').animate({
+     scrollTop:$(document).height() -$(window).height()
+  }, 500);
+   return false;
+});    
+
+
+});
+
