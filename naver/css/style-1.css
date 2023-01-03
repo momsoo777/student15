@@ -495,9 +495,8 @@ margin-top: 10px;
   left:50%; top:50%; /*부모요소의 가운데 시작*/
   transform: translate(-50%, -50%);/*자기의 크기 반만큼 이동*/
   width:5px; height: 8px;/*after,before 는 크기지정*/
-   background: no-repeat url(../img/sprite.png);
+  background: url(../img/sprite.png) no-repeat;
   background-position: -102px -50px;
- 
 }
 
 
@@ -559,7 +558,6 @@ font-size: 12px;
   width: 33.33%;
   box-sizing: border-box; 
   overflow: hidden;
-  
 }
 
 /*dimmed는 막이 생기는 형태이므로 클래스명으로 구분함*/
@@ -614,9 +612,9 @@ li.service_thumbnail_box:hover .thumbnail{
   left: 0;   bottom: -300px;
   transition: bottom 0.5s;
   padding:50px 30px 30px;
-   /*배경이미지 아이콘이 별도로 작업했다면*/
- /* background: no-repeat url(/smimg/aboutimg/free-icon-font-angle-small-right-3916869.png) 30px 0px;
-  */
+  /*배경이미지 아이콘이 별도로 작업했다면*/
+  /* background: no-repeat url(../img/main/play_circle_FILL0_wght600_GRAD0_opsz48.png) 30px 0px; */
+ 
   /*배경이미지 크기 지정*/
   /* background-size: 30px 30px; 
  */ 
@@ -637,7 +635,7 @@ li.service_thumbnail_box:hover .thumbnail{
 
 .service_thumbnail_box .discription .title_text{
   font-size: 28px;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 .service_thumbnail_box .discription .desc_text{
   font-size: 18px;
@@ -718,32 +716,21 @@ li.service_thumbnail_box:hover .thumbnail{
     position: absolute;
     left: 50%; top: 0;
     height: 100px;
-    /* background:transparent no-repeat url(../img/sprite.png); */
+    background:transparent no-repeat url(../img/sprite.png);
     transform: translateX(-50%);
   }
 
-  .content_support .support_list_box:nth-child(1) a::after{
-    background: no-repeat url(/smimg/aboutimg/네이버아이콘.png); 
-    width: 100px;
-    /* background-position: 0 -957px; */
+  .content_support .support_list_box:nth-child(1) a::after{ width: 87px;
+    background-position: 0 -957px;
   }
-  .content_support .support_list_box:nth-child(2) a:after{
-    background: no-repeat url(/smimg/aboutimg/네이버아이콘1.png); 
-    width: 101px;
-    /* width: 101px;
-    background-position: -92px -957px; */
+  .content_support .support_list_box:nth-child(2) a:after{width: 101px;
+    background-position: -92px -957px;
   }
-  .content_support .support_list_box:nth-child(3) a:after{
-    background: no-repeat url(/smimg/aboutimg/네이버아이콘2.png); 
-    width: 100px;
-    /* width: 110px;
-    background-position: -199px -957px; */
+  .content_support .support_list_box:nth-child(3) a:after{width: 110px;
+    background-position: -199px -957px;
   }
-  .content_support .support_list_box:nth-child(4) a:after{
-    background: no-repeat url(/smimg/aboutimg/네이버아이콘4.png); 
-    width: 100px;
-    /* width: 93px;
-    background-position: -316px -957px; */
+  .content_support .support_list_box:nth-child(4) a:after{width: 93px;
+    background-position: -316px -957px;
   }
 
 .content_support .support_list_box .description{}
@@ -939,6 +926,10 @@ li.service_thumbnail_box:hover .thumbnail{
 .swiper-pagination-bullet-active{
   width: 40px;}
 
+
+/*모두클론용*/
+
+
   /* 
 반응형웹 설정
 */
@@ -1006,8 +997,6 @@ li.service_thumbnail_box:hover .thumbnail{
    display: none;
   }
 
-  .swiper-button-next, .swiper-button-prev {
-    color: #e5e5e5;}
 
 }/*@media (max-width:1199.98px)*/
 
